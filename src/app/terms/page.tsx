@@ -1,57 +1,78 @@
-import Link from "next/link";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { LegalLayout, LegalSection } from "@/components/LegalLayout";
 import { site } from "@/lib/site";
 
 export const metadata = {
-  title: `Terms & Conditions | ${site.name}`,
+  title: "Terms & Conditions",
 };
 
 export default function TermsPage() {
   return (
-    <>
-      <Header />
-      <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 className="font-display text-3xl text-foreground">Terms & Conditions</h1>
-        <p className="mt-2 text-sm text-muted">Last updated: June 2026</p>
+    <LegalLayout title="Terms & Conditions">
+      <LegalSection title="Agreement">
+        <p>
+          These Terms & Conditions govern your use of {site.domain} and travel
+          advisory services provided by {site.name}. By using this website or
+          submitting an inquiry, you agree to these terms.
+        </p>
+      </LegalSection>
 
-        <div className="prose-custom mt-8 space-y-6 text-sm leading-relaxed text-muted">
-          <p>
-            These Terms & Conditions govern your use of the {site.name} website
-            and travel advisory services provided by {site.name}.
-          </p>
-          <h2 className="text-lg font-semibold text-foreground">Services</h2>
-          <p>
-            {site.name} acts as a travel advisory intermediary. All bookings are
-            fulfilled by third-party suppliers including airlines, hotels, and tour
-            operators. We are not responsible for supplier cancellations, delays,
-            or changes to services.
-          </p>
-          <h2 className="text-lg font-semibold text-foreground">Pricing</h2>
-          <p>
-            All prices displayed on this website are starting estimates in USD or
-            CAD. Final pricing is confirmed at the time of booking and may vary
-            based on travel dates, availability, taxes, fees, and supplier rates.
-          </p>
-          <h2 className="text-lg font-semibold text-foreground">Contact</h2>
-          <p>
-            For questions about these terms, contact us at{" "}
-            <a href={`mailto:${site.email}`} className="text-primary underline">
-              {site.email}
-            </a>{" "}
-            or call{" "}
-            <a href={site.phoneHref} className="text-primary underline">
-              {site.phone}
-            </a>
-            .
-          </p>
-        </div>
+      <LegalSection title="Our role">
+        <p>
+          {site.name} is an independent travel advisory intermediary. We assist
+          with planning and booking travel through third-party suppliers
+          including airlines, hotels, and tour operators. We do not operate
+          flights, own properties, or provide travel services directly.
+        </p>
+        <p>
+          {site.name} is not affiliated with, endorsed by, or sponsored by
+          Google LLC, Meta Platforms Inc., or any airline, hotel, cruise line, or
+          tour operator featured on this website.
+        </p>
+      </LegalSection>
 
-        <Link href="/" className="mt-10 inline-block text-sm font-medium text-primary hover:text-accent">
-          ← Back to home
-        </Link>
-      </main>
-      <Footer />
-    </>
+      <LegalSection title="Pricing">
+        <p>
+          All prices displayed on this website are starting estimates in USD or
+          CAD and are subject to change without notice. Final pricing is
+          confirmed at the time of booking. See our{" "}
+          <a href="/fees-refunds" className="text-primary underline">
+            Fees & Refunds
+          </a>{" "}
+          page for full details.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Bookings & third-party suppliers">
+        <p>
+          When you book through {site.name}, your contract for travel services
+          is with the applicable third-party supplier. Supplier terms govern
+          cancellations, changes, refunds, baggage, schedules, and service
+          delivery. {site.name} is not responsible for supplier delays,
+          cancellations, overbooking, or service changes.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Limitation of liability">
+        <p>
+          To the fullest extent permitted by law, {site.name} shall not be liable
+          for indirect, incidental, or consequential damages arising from travel
+          bookings or use of this website. Our liability is limited to the
+          service fees paid directly to {site.name}, if any.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Contact">
+        <p>
+          Questions about these terms:{" "}
+          <a href={`mailto:${site.email}`} className="text-primary underline">
+            {site.email}
+          </a>{" "}
+          ·{" "}
+          <a href={site.phoneHref} className="text-primary underline">
+            {site.phone}
+          </a>
+        </p>
+      </LegalSection>
+    </LegalLayout>
   );
 }

@@ -1,9 +1,9 @@
 import { Quote } from "lucide-react";
+import { site } from "@/lib/site";
 
 const testimonials = [
   {
-    quote:
-      "Direct Sales Catalyst booked our NYC to Toronto trip — flights, hotel, and a Niagara Falls day tour. Flawless from start to finish.",
+    quote: `${site.name} booked our NYC to Toronto trip — flights, hotel, and a Niagara Falls day tour. Flawless from start to finish.`,
     author: "Sarah & Michael T.",
     trip: "NYC → Toronto Getaway",
   },
@@ -14,8 +14,7 @@ const testimonials = [
     trip: "Canadian Rockies Adventure",
   },
   {
-    quote:
-      "Cross-border business travel is a headache — unless you have Direct Sales Catalyst. They handle everything between our Chicago and Montreal offices.",
+    quote: `Cross-border business travel is a headache — unless you have ${site.name}. They handle everything between our Chicago and Montreal offices.`,
     author: "The Martinez Family",
     trip: "Chicago ↔ Montreal Business",
   },
@@ -30,11 +29,12 @@ export function Testimonials() {
             Client Stories
           </p>
           <h2 className="font-display mt-3 text-3xl text-foreground sm:text-4xl">
-            Travelers who trust Direct Sales Catalyst
+            Travelers who trust {site.name}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted">
-            Real experiences from real clients who discovered the difference a
-            personal travel advisor makes.
+            Real experiences from real clients. Individual results may vary.
+            Testimonials reflect personal experiences and are not guarantees of
+            future outcomes.
           </p>
         </div>
 

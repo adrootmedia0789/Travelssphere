@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { site } from "@/lib/site";
 
 export function CtaBanner() {
   return (
@@ -8,8 +9,8 @@ export function CtaBanner() {
           Your next unforgettable journey awaits
         </h2>
         <p className="mt-4 text-lg text-white/85">
-          Complimentary consultation. No fees, no pressure — just expert travel
-          advice from the Direct Sales Catalyst team.
+          Complimentary consultation. No obligation — expert travel advice from
+          the {site.name} team.
         </p>
         <Link
           href="#contact"

@@ -155,10 +155,26 @@ export function Contact() {
                   className="mt-1 h-4 w-4 rounded border-border text-primary focus:ring-primary"
                 />
                 <span>
-                  I agree to the Terms & Conditions and Privacy Policy. I consent
-                  to being contacted about my travel inquiry.
+                  I agree to the{" "}
+                  <a href="/terms" className="font-medium text-primary underline">
+                    Terms & Conditions
+                  </a>{" "}
+                  and{" "}
+                  <a href="/privacy" className="font-medium text-primary underline">
+                    Privacy Policy
+                  </a>
+                  . I consent to being contacted by phone, email, or SMS about my
+                  travel inquiry.
                 </span>
               </label>
+              <p className="mt-3 text-xs text-muted">
+                By submitting this form, you acknowledge that displayed prices are
+                estimates only and final pricing is confirmed at booking. See our{" "}
+                <a href="/fees-refunds" className="underline">
+                  Fees & Refunds
+                </a>{" "}
+                policy.
+              </p>
               <button
                 type="submit"
                 className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-light sm:w-auto"

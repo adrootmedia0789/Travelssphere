@@ -32,8 +32,12 @@ export function Disclosure() {
                 changes. See our{" "}
                 <Link href="/terms" className="font-medium text-primary underline hover:text-accent">
                   Terms & Conditions
-                </Link>{" "}
-                and{" "}
+                </Link>
+                ,{" "}
+                <Link href="/fees-refunds" className="font-medium text-primary underline hover:text-accent">
+                  Fees & Refunds
+                </Link>
+                , and{" "}
                 <Link href="/privacy" className="font-medium text-primary underline hover:text-accent">
                   Privacy Policy
                 </Link>{" "}

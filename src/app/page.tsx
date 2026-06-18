@@ -2,6 +2,7 @@ import { CtaBanner } from "@/components/CtaBanner";
 import { Contact } from "@/components/Contact";
 import { Destinations } from "@/components/Destinations";
 import { Disclosure } from "@/components/Disclosure";
+import { Faq } from "@/components/Faq";
 import { FloatingCall, Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -14,9 +15,9 @@ export default function Home() {
   return (
     <>
       <div className="border-b border-border bg-primary/5 px-4 py-2 text-center text-xs text-muted sm:text-sm">
-        {site.name} is a licensed travel advisory service. We are not affiliated
-        with Google, Meta, any airline, or hotel chain. Prices shown are starting
-        estimates, subject to change and availability.
+        <strong className="text-foreground">{site.businessType}</strong> Prices
+        shown are estimates only. Not affiliated with Google, Meta, any airline,
+        or hotel chain. Call {site.phone} for confirmed pricing.
       </div>
       <Header />
       <main>
@@ -26,6 +27,7 @@ export default function Home() {
         <Services />
         <WhyUs />
         <Testimonials />
+        <Faq />
         <CtaBanner />
         <Contact />
       </main>

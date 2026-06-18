@@ -3,11 +3,19 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const serviceLinks = [
-  { href: "#flights", label: "Flights" },
-  { href: "#hotels", label: "Hotels" },
-  { href: "#experiences", label: "Experiences" },
-  { href: "#destinations", label: "Destinations" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#flights", label: "Flights" },
+  { href: "/#hotels", label: "Hotels" },
+  { href: "/#experiences", label: "Experiences" },
+  { href: "/#destinations", label: "Destinations" },
+  { href: "/#contact", label: "Contact" },
+];
+
+const legalLinks = [
+  { href: "/about", label: "About Us" },
+  { href: "/terms", label: "Terms & Conditions" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/fees-refunds", label: "Fees & Refunds" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export function Footer() {
@@ -25,7 +33,7 @@ export function Footer() {
             <p className="mt-4 text-xs text-white/60">
               {site.subtitle}
               <br />
-              Licensed Travel Advisor
+              {site.domain}
             </p>
           </div>
 
@@ -52,22 +60,16 @@ export function Footer() {
               Legal
             </h4>
             <ul className="mt-4 space-y-2">
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-sm text-white/75 transition hover:text-white"
-                >
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-sm text-white/75 transition hover:text-white"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/75 transition hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

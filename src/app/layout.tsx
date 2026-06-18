@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import { CookieConsent } from "@/components/CookieConsent";
 import "./globals.css";
 import { site } from "@/lib/site";
 
@@ -16,9 +17,19 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: `${site.name} | ${site.tagline}`,
-  description:
-    "Flights, hotels, and experiences worldwide — expertly planned by our travel advisors. Smarter bookings, better trips, every time.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.name} | ${site.tagline}`,
+    template: `%s | ${site.name}`,
+  },
+  description: site.shortTagline,
+  openGraph: {
+    title: site.name,
+    description: site.shortTagline,
+    url: site.url,
+    siteName: site.name,
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +42,10 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${dmSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }

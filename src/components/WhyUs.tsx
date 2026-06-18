@@ -69,7 +69,7 @@ export function WhyUs() {
             <div className="overflow-hidden rounded-2xl">
               <img
                 src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
-                alt="Direct Sales Catalyst travel advisory team"
+                alt={`${site.name} travel advisory team`}
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>
