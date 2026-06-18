@@ -23,9 +23,9 @@ export function Footer() {
               support and personalized service.
             </p>
             <p className="mt-4 text-xs text-white/60">
-              A service of {site.entity}
+              {site.subtitle}
               <br />
-              Travel Advisory Service · Licensed Travel Advisor
+              Licensed Travel Advisor
             </p>
           </div>
 
@@ -97,9 +97,8 @@ export function Footer() {
         <div className="mt-12 border-t border-white/15 pt-8">
           <p className="text-xs leading-relaxed text-white/55">
             <strong className="text-white/70">Advertising disclosure:</strong>{" "}
-            {site.name} is a travel advisory service of {site.entity}.{" "}
-            {site.entity} is a licensed travel advisory business operating in
-            the United States and Canada. We are not owned by, sponsored by, or
+            {site.name} is a licensed travel advisory business operating in the
+            United States and Canada. We are not owned by, sponsored by, or
             officially affiliated with Google LLC, Meta Platforms Inc., or any
             airline, hotel, or tour operator featured on this site. Displayed
             prices are estimates only and may vary based on dates, availability,
@@ -108,8 +107,7 @@ export function Footer() {
           </p>
           <div className="mt-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-xs text-white/55">
-              © {site.year} {site.entity}. All rights reserved. {site.name} is a
-              travel advisory service of {site.entity}.
+              © {site.year} {site.name}. All rights reserved.
             </p>
             <p className="text-xs text-white/55">
               Prices are estimates only · Subject to availability

@@ -17,8 +17,8 @@ export default function PrivacyPage() {
 
         <div className="prose-custom mt-8 space-y-6 text-sm leading-relaxed text-muted">
           <p>
-            {site.entity} (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;)
-            operates {site.name}. This Privacy Policy explains how we collect,
+            {site.name} (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;)
+            operates this website. This Privacy Policy explains how we collect,
             use, and protect your personal information.
           </p>
           <h2 className="text-lg font-semibold text-foreground">Information We Collect</h2>

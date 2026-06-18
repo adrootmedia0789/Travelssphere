@@ -18,7 +18,7 @@ export default function TermsPage() {
         <div className="prose-custom mt-8 space-y-6 text-sm leading-relaxed text-muted">
           <p>
             These Terms & Conditions govern your use of the {site.name} website
-            and travel advisory services provided by {site.entity}.
+            and travel advisory services provided by {site.name}.
           </p>
           <h2 className="text-lg font-semibold text-foreground">Services</h2>
           <p>

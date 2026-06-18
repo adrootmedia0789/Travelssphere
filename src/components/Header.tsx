@@ -24,7 +24,7 @@ export function Header() {
             {site.name}
           </span>
           <span className="text-[10px] font-medium uppercase tracking-widest text-muted sm:text-xs">
-            A service of {site.entity}
+            {site.subtitle}
           </span>
         </Link>
 

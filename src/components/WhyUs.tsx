@@ -6,7 +6,7 @@ const benefits = [
   "Preferred partner with Virtuoso & Signature Travel Network",
   "Personal relationships with hotels, airlines & local guides worldwide",
   "Complimentary travel insurance consultation included",
-  `Operated by ${site.entity}`,
+  "Licensed and insured travel advisory business",
 ];
 
 const steps = [
@@ -50,7 +50,7 @@ export function WhyUs() {
             </h2>
             <p className="mt-4 leading-relaxed text-muted">
               {site.name} isn&apos;t just a booking service — we&apos;re a
-              full-service travel advisory team backed by {site.entity}. We build
+              full-service travel advisory team. We build
               relationships with top hotels, airlines, and local experts worldwide
               so you get insider access, competitive fares, and peace of mind on
               every trip.

@@ -16,7 +16,7 @@ export function Disclosure() {
             </h2>
             <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted">
               <p>
-                {site.name} is a travel advisory service of {site.entity}. We are{" "}
+                {site.name} is a licensed travel advisory service. We are{" "}
                 <strong className="text-foreground">not</strong> affiliated with,
                 endorsed by, or sponsored by Google, Meta (Facebook/Instagram), or
                 any airline, hotel, cruise line, or tour operator listed on this

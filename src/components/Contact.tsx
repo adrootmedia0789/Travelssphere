@@ -29,7 +29,7 @@ export function Contact() {
               obligation, just great travel ideas.
             </p>
             <p className="mt-4 text-sm text-muted">
-              {site.name} is a travel advisory service of {site.entity}.
+              {site.name} — {site.subtitle}.
             </p>
 
             <div className="mt-8 space-y-5">
