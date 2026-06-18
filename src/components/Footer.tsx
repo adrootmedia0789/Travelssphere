@@ -98,6 +98,16 @@ export function Footer() {
 
         <div className="mt-12 border-t border-white/15 pt-8">
           <p className="text-xs leading-relaxed text-white/55">
+            <strong className="text-white/70">Disclaimer:</strong>{" "}
+            {site.businessType} Prices shown on this site are estimates only and
+            are not guaranteed. We are not affiliated with Google, Meta, any
+            airline, or hotel chain. Call{" "}
+            <a href={site.phoneHref} className="underline hover:text-white/80">
+              {site.phone}
+            </a>{" "}
+            for confirmed pricing.
+          </p>
+          <p className="mt-4 text-xs leading-relaxed text-white/55">
             <strong className="text-white/70">Advertising disclosure:</strong>{" "}
             {site.name} is a licensed travel advisory business operating in the
             United States and Canada. We are not owned by, sponsored by, or
